@@ -1,0 +1,9 @@
+haircut-nenad.webp
+
+Barber cutting hair with comb. Back view of young man in barber shop.
+© Nenad Stojkovic, 2018
+https://commons.wikimedia.org/wiki/File:Barber_cutting_hair_with_comb._Back_view_of_young_man_in_barber_shop.jpg
+Creative Commons Attribution 2.0 Generic
+https://creativecommons.org/licenses/by/2.0/
+
+Изменения для сайта: конвертация в WebP и кадрирование средствами CSS.

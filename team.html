@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee2d1">
+  <meta name="description" content="Как выбрать мастера и обсудить стрижку перед визитом в «СРЕЗ».">
+  <title>Мастера — СРЕЗ</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="inner">
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="header page-header">
+    <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
+    <nav class="header-nav" aria-label="Основная навигация">
+      <a href="services.html">Услуги</a>
+      <a href="about.html">О нас</a>
+      <a href="team.html" aria-current="page">Мастера</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="pill pill-outline" data-panel="booking">Записаться <span class="arrow" aria-hidden="true">↗</span></button>
+      <button type="button" class="menu-button" data-panel="menu" aria-label="Открыть меню"><span aria-hidden="true"></span></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+  <section class="team-hero" aria-labelledby="page-title">
+    <div class="wrap team-grid">
+      <div class="team-copy">
+        <h1 id="page-title">Мастера</h1>
+        <p>Перед стрижкой важно договориться о длине, контуре и укладке. Подготовьте пару деталей, чтобы проще объяснить, какой результат вам нужен.</p>
+        <p class="team-note">Профили мастеров и расписание пока не опубликованы.</p>
+      </div>
+      <figure class="photo team-photo">
+        <img src="haircut-nenad.webp" alt="Крупный план стрижки машинкой и расчёской со стороны затылка." width="960" height="1438" fetchpriority="high">
+        <figcaption class="photo-credit">Фото <a href="https://commons.wikimedia.org/wiki/File:Barber_cutting_hair_with_comb._Back_view_of_young_man_in_barber_shop.jpg">Nenad Stojkovic</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="wrap section editorial-grid" aria-labelledby="prepare-title">
+    <h2 id="prepare-title" data-reveal>Что показать<br>мастеру</h2>
+    <div class="editorial-rows">
+      <article data-reveal><h3>Фото с нужной длиной</h3><p>Лучше с двух ракурсов. Покажите, что именно нравится: линия висков, переход или объём сверху.</p></article>
+      <article data-reveal><h3>Как вы укладываете волосы</h3><p>Расскажите, пользуетесь ли феном или средствами для укладки и сколько времени готовы тратить по утрам.</p></article>
+      <article data-reveal><h3>Что хочется сохранить</h3><p>Уточните, если отращиваете волосы или бороду, и обозначьте длину, которую точно хотите оставить.</p></article>
+      <button type="button" class="pill pill-primary" data-panel="booking" data-reveal>Подобрать услугу <span class="arrow" aria-hidden="true">↗</span></button>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
+      <p>Стрижки и бритьё</p>
+    </div>
+    <nav aria-label="Навигация в подвале">
+      <a href="services.html">Услуги</a>
+      <a href="about.html">О нас</a>
+      <a href="team.html" aria-current="page">Мастера</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <button type="button" class="pill pill-outline" data-panel="booking">Записаться <span class="arrow" aria-hidden="true">↗</span></button>
+  </div>
+</footer>
+
+  <dialog id="panel" aria-labelledby="panel-title">
+  <div class="panel-shell">
+    <form method="dialog" class="panel-dismiss">
+      <button type="submit" class="close-button" aria-label="Закрыть окно"><span aria-hidden="true"></span></button>
+    </form>
+    <h2 id="panel-title" tabindex="-1"></h2>
+    <div id="panel-content"></div>
+  </div>
+</dialog>
+
+<template id="menu">
+  <nav class="panel-nav" aria-label="Меню сайта">
+    <a href="index.html">Главная <span aria-hidden="true">↗</span></a>
+    <a href="services.html">Услуги <span aria-hidden="true">↗</span></a>
+      <a href="about.html">О нас <span aria-hidden="true">↗</span></a>
+      <a href="team.html" aria-current="page">Мастера <span aria-hidden="true">↗</span></a>
+      <a href="contacts.html">Контакты <span aria-hidden="true">↗</span></a>
+    <button type="button" data-panel="booking">Записаться <span aria-hidden="true">↗</span></button>
+  </nav>
+</template>
+<template id="booking">
+  <p id="booking-note">Это демозапись. Выбор и пожелания остаются в этом окне и никуда не отправляются.</p>
+  <form id="booking-form" aria-describedby="booking-note">
+    <fieldset>
+      <legend>Услуга</legend>
+      <label><input type="radio" name="service" value="Стрижка" required> Стрижка</label>
+      <label><input type="radio" name="service" value="Бритьё"> Бритьё</label>
+      <label><input type="radio" name="service" value="Оформление бороды"> Оформление бороды</label>
+    </fieldset>
+    <label class="notes-label" for="visit-notes">Пожелания к визиту <span>(необязательно)</span></label>
+    <textarea id="visit-notes" name="notes" rows="2" maxlength="240" placeholder="Например, сохранить длину сверху"></textarea>
+    <button type="submit" class="pill pill-primary">Посмотреть выбор <span class="arrow" aria-hidden="true">↗</span></button>
+  </form>
+  <section id="booking-summary" hidden>
+    <h3 tabindex="-1">Ваш выбор</h3>
+    <p class="summary-service"></p>
+    <p class="summary-notes"></p>
+    <button type="button" class="text-link" data-edit-booking>Изменить выбор</button>
+  </section>
+</template>
+<template id="interior">
+  <img class="interior-image" src="interior.webp" width="1672" height="941" alt="Солнечный свет падает на штукатурку рядом с чёрным барберским креслом, полками и арочным зеркалом.">
+  <p class="photo-caption">Визуализация интерьера «СРЕЗ».</p>
+</template>
+
+</body>
+</html>
