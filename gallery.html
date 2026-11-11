@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee2d1">
+  <meta name="description" content="Интерьер «СРЕЗ», инструменты и фотографии процесса стрижки.">
+  <title>Галерея — СРЕЗ</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="expanded.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="inner" data-page="gallery">
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="header page-header">
+    <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
+    <nav class="header-nav" aria-label="Основная навигация">
+      <a href="services.html">Услуги</a>
+      <a href="about.html">О нас</a>
+      <a href="team.html">Мастера</a>
+      <a href="gallery.html" aria-current="page">Галерея</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a class="pill pill-outline" href="booking.html">Записаться <span class="arrow" aria-hidden="true">↗</span></a>
+      <button type="button" class="menu-button" data-panel="menu" aria-label="Открыть меню"><span aria-hidden="true"></span></button>
+    </div>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+  <section class="page-lead" aria-labelledby="page-title">
+    <h1 id="page-title">Галерея</h1>
+    <p>Визуализация студии и документальные кадры стрижки и оформления бороды.</p>
+  </section>
+  <section class="gallery" aria-label="Кадры галереи" data-gallery>
+    <div class="gallery-controls" data-gallery-controls hidden>
+      <div class="gallery-choices" role="group" aria-label="Выбрать кадр">
+        <button type="button" data-gallery-choice="0">Интерьер</button>
+        <button type="button" data-gallery-choice="1">Стрижка</button>
+        <button type="button" data-gallery-choice="2">Борода</button>
+        <button type="button" data-gallery-choice="3">Инструменты</button>
+      </div>
+      <div class="gallery-arrows">
+        <button type="button" data-gallery-step="-1" aria-label="Предыдущий кадр">←</button>
+        <span aria-hidden="true" data-gallery-count></span>
+        <button type="button" data-gallery-step="1" aria-label="Следующий кадр">→</button>
+      </div>
+    </div>
+    <div class="gallery-viewport">
+      <figure class="photo gallery-slide" data-label="Интерьер">
+        <img src="interior.webp" alt="Солнечный свет из окна, чёрное кресло и арочное зеркало." width="1672" height="941" fetchpriority="high">
+        <figcaption>Визуализация интерьера «СРЕЗ»</figcaption>
+      </figure>
+      <figure class="photo gallery-slide" data-label="Стрижка">
+        <img src="haircut-nenad.webp" alt="Барбер держит пряди расчёской и стрижёт волосы машинкой." width="960" height="1438" loading="lazy">
+        <figcaption class="photo-credit">Фото <a href="https://commons.wikimedia.org/wiki/File:Barber_cutting_hair_with_comb._Back_view_of_young_man_in_barber_shop.jpg">Nenad Stojkovic</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+      </figure>
+      <figure class="photo gallery-slide" data-label="Борода">
+        <img src="beard-trim.webp" alt="Мастер подравнивает бороду триммером." width="1080" height="1080" loading="lazy">
+        <figcaption class="photo-credit">Фото <a href="https://hairspies.com/">Hair Spies</a> · <a href="https://commons.wikimedia.org/wiki/File:Beard_trimming_(51211203860).jpg">оригинал</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+      </figure>
+      <figure class="photo gallery-slide" data-label="Инструменты">
+        <img src="tools.webp" alt="Ножницы, расчёска и полотенце в солнечном свете." width="820" height="1024" loading="lazy">
+        <figcaption>Визуализация инструментов</figcaption>
+      </figure>
+    </div>
+    <p class="sr-only" role="status" data-gallery-status></p>
+  </section>
+  <div class="related" data-reveal="line">
+    <a class="text-link" href="services.html">Посмотреть услуги <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href="booking.html">Открыть демозапись <span aria-hidden="true">↗</span></a>
+  </div>
+</main>
+
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
+      <p>Стрижки и бритьё</p>
+    </div>
+    <nav aria-label="Навигация в подвале">
+      <a href="services.html">Услуги</a>
+      <a href="about.html">О нас</a>
+      <a href="team.html">Мастера</a>
+      <a href="gallery.html" aria-current="page">Галерея</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <a class="pill pill-outline" href="booking.html">Записаться <span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</footer>
+
+  <dialog id="panel" aria-labelledby="panel-title">
+  <div class="panel-shell">
+    <form method="dialog" class="panel-dismiss">
+      <button type="submit" class="close-button" aria-label="Закрыть окно"><span aria-hidden="true"></span></button>
+    </form>
+    <h2 id="panel-title" tabindex="-1"></h2>
+    <div id="panel-content"></div>
+  </div>
+</dialog>
+
+<template id="menu">
+  <nav class="panel-nav" aria-label="Меню сайта">
+    <a href="index.html">Главная <span aria-hidden="true">↗</span></a>
+    <a href="services.html">Услуги <span aria-hidden="true">↗</span></a>
+      <a href="about.html">О нас <span aria-hidden="true">↗</span></a>
+      <a href="team.html">Мастера <span aria-hidden="true">↗</span></a>
+      <a href="gallery.html" aria-current="page">Галерея <span aria-hidden="true">↗</span></a>
+      <a href="contacts.html">Контакты <span aria-hidden="true">↗</span></a>
+    <a href="booking.html">Записаться <span aria-hidden="true">↗</span></a>
+  </nav>
+</template>
+<template id="interior">
+  <img class="interior-image" src="interior.webp" width="1672" height="941" alt="Солнечный свет падает на штукатурку рядом с чёрным барберским креслом, полками и арочным зеркалом.">
+  <p class="photo-caption">Визуализация интерьера «СРЕЗ».</p>
+  <a class="text-link" href="gallery.html">Все кадры в галерее <span aria-hidden="true">↗</span></a>
+</template>
+
+</body>
+</html>

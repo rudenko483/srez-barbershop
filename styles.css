@@ -57,6 +57,7 @@ button:focus-visible, a:focus-visible, label:has(:focus-visible) {
   inset: 0;
   overflow: hidden;
   z-index: -1;
+  animation: scene-unfold 1.08s var(--ease) both;
 }
 .scene img {
   display: block;
@@ -64,7 +65,7 @@ button:focus-visible, a:focus-visible, label:has(:focus-visible) {
   height: 100%;
   object-fit: cover;
   object-position: 50% 53%;
-  animation: settle 1.65s var(--ease) both;
+  animation: settle 1.5s var(--ease) both;
 }
 .scene::after {
   content: "";
@@ -190,14 +191,15 @@ h1 {
   padding-inline-end: .13em;
   overflow: clip;
 }
-.heading-line span {
+.heading-words {
   display: block;
   transform-origin: left center;
   transform: scaleX(1.105);
-  animation: lift 900ms var(--ease) 120ms both;
 }
+.heading-word { display: inline-block; animation: lift 790ms var(--ease) 115ms both; }
 .heading-line { padding-inline-end: .85em; }
-.heading-line + .heading-line span { animation-delay: 215ms; }
+.heading-line + .heading-line .heading-word { animation-delay: 225ms; }
+.heading-line + .heading-line .heading-word + .heading-word { animation-delay: 315ms; }
 .description {
   margin-top: clamp(1.2rem, 1.8vw, 1.9rem);
   font-size: clamp(1rem, 1.57vw, 1.55rem);
@@ -306,10 +308,14 @@ fieldset input { accent-color: var(--wine); }
 .photo-caption { margin-top: .6rem; }
 
 .enter { animation: enter 750ms var(--ease) var(--delay, 80ms) both; }
-@keyframes settle { from { transform: scale(1.045); } to { transform: scale(1); } }
+@keyframes scene-unfold {
+  from { clip-path: inset(0 0 0 30%); opacity: .52; }
+  to { clip-path: inset(0); opacity: 1; }
+}
+@keyframes settle { from { transform: scale(1.105); } to { transform: scale(1); } }
 @keyframes lift {
-  from { transform: translateY(112%) scaleX(1.105); }
-  to { transform: translateY(0) scaleX(1.105); }
+  from { transform: translateY(113%); }
+  to { transform: translateY(0); }
 }
 @keyframes enter { from { opacity: 0; transform: translateY(.75rem); } }
 @keyframes panel-in { from { opacity: 0; transform: translateY(.9rem) scale(.985); } }

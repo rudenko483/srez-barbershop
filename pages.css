@@ -378,11 +378,28 @@ summary:focus-visible, textarea:focus-visible {
 }
 
 @view-transition { navigation: auto; }
-::view-transition-old(root) { animation-duration: 175ms; }
-::view-transition-new(root) { animation-duration: 400ms; }
+::view-transition-old(root) { animation: route-out 360ms var(--ease) both; }
+::view-transition-new(root) { animation: route-in 580ms var(--ease) both; }
+@keyframes route-out { to { opacity: .18; transform: translateY(-1rem); } }
+@keyframes route-in {
+  from { opacity: .45; clip-path: inset(9% 0 0); transform: translateY(1.05rem); }
+  to { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+}
 [data-reveal].revealed { animation: reveal-in 650ms var(--ease) both; }
+[data-reveal="photo"].revealed { animation-name: photo-sweep; animation-duration: 850ms; }
+[data-reveal="side"].revealed { animation-name: side-in; animation-duration: 740ms; }
+[data-reveal="line"].revealed { animation-name: line-in; animation-duration: 700ms; }
 [data-reveal].revealed:focus-within { animation: none; }
 @keyframes reveal-in { from { opacity: .45; transform: translateY(.85rem); } }
+@keyframes photo-sweep {
+  from { opacity: .6; clip-path: inset(0 15% 0 0); }
+  to { opacity: 1; clip-path: inset(0); }
+}
+@keyframes side-in { from { opacity: .4; transform: translateX(-1rem); } }
+@keyframes line-in {
+  from { opacity: .48; clip-path: inset(0 8% 0 0); transform: translateY(1.25rem); }
+  to { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+}
 @keyframes photo-enter {
   from { opacity: .55; clip-path: inset(5% 0 0 0 round .28rem); transform: translateY(.65rem); }
   to { opacity: 1; clip-path: inset(0 round .28rem); transform: translateY(0); }

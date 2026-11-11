@@ -7,3 +7,13 @@ Creative Commons Attribution 2.0 Generic
 https://creativecommons.org/licenses/by/2.0/
 
 Изменения для сайта: конвертация в WebP и кадрирование средствами CSS.
+
+beard-trim.webp
+
+Beard trimming
+© Hair Spies, 2021 — https://hairspies.com/
+https://commons.wikimedia.org/wiki/File:Beard_trimming_(51211203860).jpg
+Creative Commons Attribution 2.0 Generic
+https://creativecommons.org/licenses/by/2.0/
+
+Изменения для сайта: конвертация в WebP и кадрирование средствами CSS.
