@@ -37,31 +37,6 @@ body { background: var(--cream); }
   background: var(--cream);
   padding-inline: clamp(1.35rem, 6.5vw, 6.5rem);
 }
-.scroll-cue {
-  position: absolute;
-  inset: auto auto 4.5% var(--gutter);
-  display: inline-flex;
-  align-items: center;
-  gap: .65rem;
-  min-height: 44px;
-  color: var(--ink);
-  font-size: .75rem;
-  font-weight: 650;
-  text-decoration: none;
-  animation: enter 650ms var(--ease) 640ms both;
-}
-.scroll-cue span {
-  display: grid;
-  place-items: center;
-  border: 1px solid #32251c9c;
-  border-radius: 100px;
-  background: #f2e6d73d;
-  width: 1.42rem;
-  height: 2rem;
-  transition: transform 240ms var(--ease);
-}
-.scroll-cue:hover span { transform: translateY(3px); }
-
 main h2 {
   padding: 0;
   margin: 0;
@@ -406,8 +381,6 @@ summary:focus-visible, textarea:focus-visible {
 }
 
 @media (max-width: 800px) {
-  .scroll-cue { color: var(--paper); inset-block-end: 2%; text-shadow: 0 1px 3px var(--espresso); }
-  .scroll-cue span { background: #251b16d9; border-color: #f2e6d78c; }
   .wrap { width: calc(100% - clamp(2.75rem, 11.6vw, 7.2rem)); }
 }
 @media (max-width: 640px) {
@@ -419,7 +392,6 @@ summary:focus-visible, textarea:focus-visible {
   .team-photo { aspect-ratio: 6 / 5; }
   .site-footer nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (max-height: 530px) { .scroll-cue { display: none; } }
 @media (max-width: 360px) {
   .inner h1 { font-size: 3rem; }
   .related { flex-direction: column; }

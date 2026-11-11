@@ -47,6 +47,7 @@ button:focus-visible, a:focus-visible, label:has(:focus-visible) {
   --gutter: clamp(2.5rem, 9.55vw, 12rem);
   position: relative;
   isolation: isolate;
+  background: #d6c3ad;
   min-height: 100svh;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -57,7 +58,7 @@ button:focus-visible, a:focus-visible, label:has(:focus-visible) {
   inset: 0;
   overflow: hidden;
   z-index: -1;
-  animation: scene-unfold 1.08s var(--ease) both;
+  animation: scene-unfold 1.42s cubic-bezier(.31,.62,.24,1) 70ms both;
 }
 .scene img {
   display: block;
@@ -65,7 +66,7 @@ button:focus-visible, a:focus-visible, label:has(:focus-visible) {
   height: 100%;
   object-fit: cover;
   object-position: 50% 53%;
-  animation: settle 1.5s var(--ease) both;
+  animation: settle 1.65s cubic-bezier(.26,.68,.26,1) both;
 }
 .scene::after {
   content: "";
@@ -196,10 +197,10 @@ h1 {
   transform-origin: left center;
   transform: scaleX(1.105);
 }
-.heading-word { display: inline-block; animation: lift 790ms var(--ease) 115ms both; }
+.heading-word { display: inline-block; animation: lift 820ms cubic-bezier(.24,.74,.26,1) 180ms both; }
 .heading-line { padding-inline-end: .85em; }
-.heading-line + .heading-line .heading-word { animation-delay: 225ms; }
-.heading-line + .heading-line .heading-word + .heading-word { animation-delay: 315ms; }
+.heading-line + .heading-line .heading-word { animation-delay: 450ms; }
+.heading-line + .heading-line .heading-word + .heading-word { animation-delay: 590ms; }
 .description {
   margin-top: clamp(1.2rem, 1.8vw, 1.9rem);
   font-size: clamp(1rem, 1.57vw, 1.55rem);
@@ -213,7 +214,6 @@ h1 {
   align-items: center;
   gap: clamp(1rem, 2.75vw, 2.85rem);
   margin-top: clamp(1.65rem, 3.4vw, 3.5rem);
-  --delay: 450ms;
 }
 .interior-button {
   min-height: 44px;
@@ -309,7 +309,8 @@ fieldset input { accent-color: var(--wine); }
 
 .enter { animation: enter 750ms var(--ease) var(--delay, 80ms) both; }
 @keyframes scene-unfold {
-  from { clip-path: inset(0 0 0 30%); opacity: .52; }
+  from { clip-path: inset(0 0 0 59%); opacity: .68; }
+  35% { opacity: .94; }
   to { clip-path: inset(0); opacity: 1; }
 }
 @keyframes settle { from { transform: scale(1.105); } to { transform: scale(1); } }

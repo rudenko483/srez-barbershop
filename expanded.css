@@ -5,11 +5,64 @@
   text-decoration: none;
 }
 .pill-outline { color: inherit; }
-.hero-actions .pill { min-height: clamp(3.25rem, 4.3vw, 4.25rem); }
-.interior-button {
+.hero .header-actions .pill {
+  min-height: 52px;
+  font-size: clamp(1.125rem, 1.4vw, 1.25rem);
+  font-weight: 620;
+  background: #f3e6d4bf;
+}
+.hero .header-actions .pill:hover { background: #f3e6d4; }
+.hero-actions {
+  flex-wrap: wrap;
+  gap: clamp(.5rem, 1.35vw, 1.35rem);
+  animation: hero-controls-in 640ms var(--ease) 490ms both;
+}
+.hero-actions :is(.pill, .interior-button) {
+  min-height: clamp(3.5rem, 4.65vw, 4.35rem);
+  font-size: clamp(1.125rem, 1.55vw, 1.25rem);
+  font-weight: 680;
+}
+.hero-actions .interior-button {
+  padding-inline: 1.05em 1.25em;
+  border: 1px solid #36241776;
+  border-radius: 100px;
+  background: #f3e6d4e8;
+  gap: .55em;
+  transition: background-color 220ms ease;
+}
+.hero-actions .interior-button:hover { background: #fff4e5; }
+.hero-actions .circle { width: 1.45em; }
+.hero-links {
+  position: absolute;
+  inset: auto auto 5% var(--gutter);
+  display: flex;
+  align-items: stretch;
+  gap: .5rem;
+  animation: hero-controls-in 600ms var(--ease) 680ms both;
+}
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
   min-height: 48px;
-  font-size: clamp(1rem, 1.22vw, 1.125rem);
+  gap: .85em;
+  padding: .55em .9em;
+  border: 1px solid #50362673;
+  border-radius: .35rem;
+  background: #f3e6d4eb;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
   font-weight: 650;
+  text-decoration: none;
+  transition: background-color 220ms ease;
+}
+.hero-links a:hover { background: #fff4e5; }
+.hero-links span { color: var(--wine); }
+.hero-actions:focus-within, .hero-links:focus-within { animation: none; }
+@keyframes hero-controls-in {
+  from { opacity: .58; transform: translateY(.75rem); }
+}
+@media (max-width: 800px), (max-height: 680px) {
+  .hero-links { position: static; margin-top: clamp(.85rem, 2.4vh, 1.6rem); }
 }
 .header-actions .pill[aria-current] { border-color: var(--wine); }
 .studio-copy .text-link { display: flex; }
@@ -187,8 +240,8 @@
 }
 @media (max-width: 410px) {
   .header-actions .pill, .hero-actions .pill { padding-inline: 1.02em; gap: .5em; }
-  .hero-actions { gap: .6rem; }
-  .hero-actions .interior-button { gap: .5em; }
+  .hero-actions .pill, .hero-actions .interior-button { padding-inline: .62em; gap: .4em; }
+  .hero-actions .circle { width: 1.25em; }
   .header { gap: .65rem; }
   .header-actions { gap: .3rem; }
 }
