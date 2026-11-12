@@ -8,18 +8,22 @@ https://creativecommons.org/licenses/by/2.0/
 
 Изменения для сайта: конвертация в WebP и кадрирование средствами CSS.
 
-result-fade.webp — Fade hairstyle (51210140156)
-https://commons.wikimedia.org/wiki/File:Fade_hairstyle_(51210140156).jpg
+result-part-long.webp — A man with a short haircut and a shirt on
+Фото: Bùi Hoàng Long
+https://unsplash.com/photos/a-man-with-a-short-haircut-and-a-shirt-on-yHuHAnVMKJs
+Unsplash License — https://unsplash.com/license
 
-result-short.webp — Men's haircut (51210139991)
-https://commons.wikimedia.org/wiki/File:Men%27s_haircut_(51210139991).jpg
+result-texture-hofman.webp — Portrait of a Man
+Фото: Sam Hofman
+https://www.pexels.com/photo/portrait-of-a-man-19855460/
+Pexels License — https://www.pexels.com/license/
 
-result-texture.webp — Creative men hairstyle (51210901029)
-https://commons.wikimedia.org/wiki/File:Creative_men_hairstyle_(51210901029).jpg
+result-taper-ebadi.webp — Profile view of a man with a thick beard and dark hair
+Фото: Ahmad Ebadi
+https://unsplash.com/photos/man-with-beard-and-dark-hair-S3GxGKyGPWM
+Unsplash License — https://unsplash.com/license
 
-Автор трёх фотографий: Hair Spies — https://hairspies.com/
-Лицензия: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
-Изменения для сайта: конвертация в WebP и кадрирование средствами CSS.
+Изменения трёх примеров: уменьшение разрешения, конвертация в WebP и кадрирование миниатюр средствами CSS.
 
 beard-trim.webp
 

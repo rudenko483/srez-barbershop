@@ -78,7 +78,8 @@
   border-radius: .32rem;
   background: var(--espresso);
 }
-.result-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 480ms var(--ease); }
+.result-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 17%; transition: transform 480ms var(--ease); }
+#result-fade .result-image img { object-position: center 3%; }
 .result-image:is(:hover, :focus-visible) img { transform: scale(1.035); }
 .result-image > span {
   position: absolute;
