@@ -55,8 +55,10 @@ content.addEventListener('click', (event) => {
 
 dialog.addEventListener('close', () => {
   if (dialog.open) return;
+  if (document.activeElement === document.body || dialog.contains(document.activeElement)) {
+    opener?.focus({ preventScroll: true });
+  }
   content.replaceChildren();
-  opener?.focus({ preventScroll: true });
   opener = undefined;
 });
 
