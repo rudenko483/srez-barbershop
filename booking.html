@@ -9,9 +9,9 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css?v=52cdd5524f8b">
-  <link rel="stylesheet" href="pages.css?v=cee80a2bd47c">
-  <link rel="stylesheet" href="expanded.css?v=09165ff02c32">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="pages.css?v=a9fd253dd664">
+  <link rel="stylesheet" href="expanded.css?v=073ef9f1c22a">
+  <script src="script.js?v=5ce53c6efb52" defer></script>
 </head>
 <body class="inner" data-page="booking">
   <a class="skip-link" href="#main">К содержанию</a>
@@ -25,14 +25,14 @@
       <a href="contacts.html">Контакты</a>
     </nav>
     <div class="header-actions">
-      <a class="pill pill-outline" aria-current="page" href="booking.html">Записаться <span class="arrow" aria-hidden="true">↗</span></a>
+
       <button type="button" class="menu-button" data-panel="menu" aria-label="Открыть меню"><span aria-hidden="true"></span></button>
     </div>
   </header>
   <main id="main" class="wrap" tabindex="-1">
   <section class="page-lead" aria-labelledby="page-title">
-    <h1 id="page-title">Запись</h1>
-    <p id="booking-note">Демонстрационный выбор услуги. Сайт не отправляет данные и не бронирует время.</p>
+    <h1 id="page-title">Выбор услуги</h1>
+    <p id="booking-note">Посмотрите итог выбора и пожелания. Это демоформа, данные не отправляются.</p>
   </section>
   <div class="booking-grid">
     <div class="booking-workspace">
@@ -45,9 +45,15 @@
           <label><input type="radio" name="service" value="shave"><span><strong>Чистое бритьё</strong><small>Бритьё лица</small></span></label>
           <label><input type="radio" name="service" value="combo"><span><strong>Стрижка и борода</strong><small>Две услуги за один визит</small></span></label>
         </fieldset>
-        <label class="notes-label" for="visit-notes">Пожелания к форме <span>(необязательно)</span></label>
-        <textarea id="visit-notes" name="notes" rows="3" maxlength="240" autocomplete="off" placeholder="Например, сохранить длину сверху"></textarea>
-        <button type="submit" class="pill pill-primary">Посмотреть выбор <span class="arrow" aria-hidden="true">↗</span></button>
+        <details class="booking-notes">
+          <summary>Добавить пожелания <span>(необязательно)</span></summary>
+          <label class="notes-label" for="visit-notes">Пожелания к форме</label>
+          <textarea id="visit-notes" name="notes" rows="2" maxlength="240" autocomplete="off" placeholder="Например, сохранить длину сверху"></textarea>
+        </details>
+        <div class="booking-actions">
+          <p role="status" id="booking-selected"></p>
+          <button type="submit" class="pill pill-primary">Посмотреть итог <span class="arrow" aria-hidden="true">↗</span></button>
+        </div>
       </form>
       <section id="booking-summary" aria-labelledby="booking-choice" hidden>
         <h2 id="booking-choice" tabindex="-1">Ваш выбор</h2>
@@ -78,7 +84,7 @@
       <a href="gallery.html">Галерея</a>
       <a href="contacts.html">Контакты</a>
     </nav>
-    <a class="pill pill-outline" href="booking.html">Записаться <span class="arrow" aria-hidden="true">↗</span></a>
+    <a class="pill pill-outline" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
   </div>
 </footer>
 
@@ -100,13 +106,12 @@
       <a href="team.html">Мастера <span aria-hidden="true">↗</span></a>
       <a href="gallery.html">Галерея <span aria-hidden="true">↗</span></a>
       <a href="contacts.html">Контакты <span aria-hidden="true">↗</span></a>
-    <a href="booking.html">Записаться <span aria-hidden="true">↗</span></a>
+    <a href="booking.html">Выбрать услугу <span aria-hidden="true">↗</span></a>
   </nav>
 </template>
 <template id="interior">
   <img class="interior-image" src="interior.webp" width="1672" height="941" alt="Солнечный свет падает на штукатурку рядом с чёрным барберским креслом, полками и арочным зеркалом.">
   <p class="photo-caption">Визуализация интерьера «СРЕЗ».</p>
-  <a class="text-link" href="gallery.html">Все кадры в галерее <span aria-hidden="true">↗</span></a>
 </template>
 
 </body>

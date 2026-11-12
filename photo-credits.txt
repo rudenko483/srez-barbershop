@@ -8,6 +8,19 @@ https://creativecommons.org/licenses/by/2.0/
 
 Изменения для сайта: конвертация в WebP и кадрирование средствами CSS.
 
+result-fade.webp — Fade hairstyle (51210140156)
+https://commons.wikimedia.org/wiki/File:Fade_hairstyle_(51210140156).jpg
+
+result-short.webp — Men's haircut (51210139991)
+https://commons.wikimedia.org/wiki/File:Men%27s_haircut_(51210139991).jpg
+
+result-texture.webp — Creative men hairstyle (51210901029)
+https://commons.wikimedia.org/wiki/File:Creative_men_hairstyle_(51210901029).jpg
+
+Автор трёх фотографий: Hair Spies — https://hairspies.com/
+Лицензия: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
+Изменения для сайта: конвертация в WebP и кадрирование средствами CSS.
+
 beard-trim.webp
 
 Beard trimming

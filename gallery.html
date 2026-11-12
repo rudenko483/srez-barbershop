@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee2d1">
-  <meta name="description" content="Интерьер «СРЕЗ», инструменты и фотографии процесса стрижки.">
+  <meta name="description" content="Фотографии законченных стрижек для выбора формы, длины и укладки.">
   <title>Галерея — СРЕЗ</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css?v=52cdd5524f8b">
-  <link rel="stylesheet" href="pages.css?v=cee80a2bd47c">
-  <link rel="stylesheet" href="expanded.css?v=09165ff02c32">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="pages.css?v=a9fd253dd664">
+  <link rel="stylesheet" href="expanded.css?v=073ef9f1c22a">
+  <script src="script.js?v=5ce53c6efb52" defer></script>
 </head>
 <body class="inner" data-page="gallery">
   <a class="skip-link" href="#main">К содержанию</a>
@@ -25,52 +25,53 @@
       <a href="contacts.html">Контакты</a>
     </nav>
     <div class="header-actions">
-      <a class="pill pill-outline" href="booking.html">Записаться <span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="pill pill-outline" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
       <button type="button" class="menu-button" data-panel="menu" aria-label="Открыть меню"><span aria-hidden="true"></span></button>
     </div>
   </header>
   <main id="main" class="wrap" tabindex="-1">
   <section class="page-lead" aria-labelledby="page-title">
     <h1 id="page-title">Галерея</h1>
-    <p>Визуализация студии и документальные кадры стрижки и оформления бороды.</p>
+    <p>Примеры стрижек для выбора длины, формы и укладки.</p>
   </section>
-  <section class="gallery" aria-label="Кадры галереи" data-gallery>
-    <div class="gallery-controls" data-gallery-controls hidden>
-      <div class="gallery-choices" role="group" aria-label="Выбрать кадр">
-        <button type="button" data-gallery-choice="0">Интерьер</button>
-        <button type="button" data-gallery-choice="1">Стрижка</button>
-        <button type="button" data-gallery-choice="2">Борода</button>
-        <button type="button" data-gallery-choice="3">Инструменты</button>
-      </div>
-      <div class="gallery-arrows">
-        <button type="button" data-gallery-step="-1" aria-label="Предыдущий кадр">←</button>
-        <span aria-hidden="true" data-gallery-count></span>
-        <button type="button" data-gallery-step="1" aria-label="Следующий кадр">→</button>
-      </div>
-    </div>
-    <div class="gallery-viewport">
-      <figure class="photo gallery-slide" data-label="Интерьер">
-        <img src="interior.webp" alt="Солнечный свет из окна, чёрное кресло и арочное зеркало." width="1672" height="941" fetchpriority="high">
-        <figcaption>Визуализация интерьера «СРЕЗ»</figcaption>
-      </figure>
-      <figure class="photo gallery-slide" data-label="Стрижка">
-        <img src="haircut-nenad.webp" alt="Барбер держит пряди расчёской и стрижёт волосы машинкой." width="960" height="1438" loading="lazy">
-        <figcaption class="photo-credit">Фото <a href="https://commons.wikimedia.org/wiki/File:Barber_cutting_hair_with_comb._Back_view_of_young_man_in_barber_shop.jpg">Nenad Stojkovic</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
-      </figure>
-      <figure class="photo gallery-slide" data-label="Борода">
-        <img src="beard-trim.webp" alt="Мастер подравнивает бороду триммером." width="1080" height="1080" loading="lazy">
-        <figcaption class="photo-credit">Фото <a href="https://hairspies.com/">Hair Spies</a> · <a href="https://commons.wikimedia.org/wiki/File:Beard_trimming_(51211203860).jpg">оригинал</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
-      </figure>
-      <figure class="photo gallery-slide" data-label="Инструменты">
-        <img src="tools.webp" alt="Ножницы, расчёска и полотенце в солнечном свете." width="820" height="1024" loading="lazy">
-        <figcaption>Визуализация инструментов</figcaption>
-      </figure>
-    </div>
-    <p class="sr-only" role="status" data-gallery-status></p>
-  </section>
-  <div class="related" data-reveal="line">
+  <div class="result-grid">
+
+    <figure class="result-card" id="result-fade" data-label="Пробор и короткие виски">
+      <a class="result-image" href="result-fade.webp" data-panel="result" aria-label="Увеличить фото: Пробор и короткие виски">
+        <img src="result-fade.webp" alt="Уложенный набок верх и выбритый пробор." width="1080" height="720" fetchpriority="high">
+        <span aria-hidden="true">+</span>
+      </a>
+      <figcaption>
+        <strong>Пробор и короткие виски</strong>
+        <span>Пример стрижки · <a href="https://hairspies.com/">Hair Spies</a> · <a href="https://commons.wikimedia.org/wiki/File:Fade_hairstyle_(51210140156).jpg">Оригинал</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></span>
+      </figcaption>
+    </figure>
+
+    <figure class="result-card" id="result-short" data-label="Плавный переход">
+      <a class="result-image" href="result-short.webp" data-panel="result" aria-label="Увеличить фото: Плавный переход">
+        <img src="result-short.webp" alt="Укороченные виски и затылок, объём сверху." width="1080" height="1080" loading="lazy">
+        <span aria-hidden="true">+</span>
+      </a>
+      <figcaption>
+        <strong>Плавный переход</strong>
+        <span>Пример стрижки · <a href="https://hairspies.com/">Hair Spies</a> · <a href="https://commons.wikimedia.org/wiki/File:Men%27s_haircut_(51210139991).jpg">Оригинал</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></span>
+      </figcaption>
+    </figure>
+
+    <figure class="result-card" id="result-texture" data-label="Короткий верх с рисунком">
+      <a class="result-image" href="result-texture.webp" data-panel="result" aria-label="Увеличить фото: Короткий верх с рисунком">
+        <img src="result-texture.webp" alt="Короткие светлые волосы и выбритый рисунок со стороны затылка." width="1080" height="1080" loading="lazy">
+        <span aria-hidden="true">+</span>
+      </a>
+      <figcaption>
+        <strong>Короткий верх с рисунком</strong>
+        <span>Пример стрижки · <a href="https://hairspies.com/">Hair Spies</a> · <a href="https://commons.wikimedia.org/wiki/File:Creative_men_hairstyle_(51210901029).jpg">Оригинал</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="related">
     <a class="text-link" href="services.html">Посмотреть услуги <span aria-hidden="true">↗</span></a>
-    <a class="text-link" href="booking.html">Открыть демозапись <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href="team.html#visit">Подготовка к визиту <span aria-hidden="true">↗</span></a>
   </div>
 </main>
 
@@ -87,7 +88,7 @@
       <a href="gallery.html" aria-current="page">Галерея</a>
       <a href="contacts.html">Контакты</a>
     </nav>
-    <a class="pill pill-outline" href="booking.html">Записаться <span class="arrow" aria-hidden="true">↗</span></a>
+    <a class="pill pill-outline" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
   </div>
 </footer>
 
@@ -109,13 +110,12 @@
       <a href="team.html">Мастера <span aria-hidden="true">↗</span></a>
       <a href="gallery.html" aria-current="page">Галерея <span aria-hidden="true">↗</span></a>
       <a href="contacts.html">Контакты <span aria-hidden="true">↗</span></a>
-    <a href="booking.html">Записаться <span aria-hidden="true">↗</span></a>
+    <a href="booking.html">Выбрать услугу <span aria-hidden="true">↗</span></a>
   </nav>
 </template>
 <template id="interior">
   <img class="interior-image" src="interior.webp" width="1672" height="941" alt="Солнечный свет падает на штукатурку рядом с чёрным барберским креслом, полками и арочным зеркалом.">
   <p class="photo-caption">Визуализация интерьера «СРЕЗ».</p>
-  <a class="text-link" href="gallery.html">Все кадры в галерее <span aria-hidden="true">↗</span></a>
 </template>
 
 </body>
