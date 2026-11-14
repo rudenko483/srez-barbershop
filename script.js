@@ -110,7 +110,17 @@ if (bookingForm) {
     notesText.hidden = !notes;
     bookingForm.hidden = true;
     summary.hidden = false;
-    heading.focus();
+    if (window.showPortfolioReceipt) {
+      window.showPortfolioReceipt({
+        heading: 'Спасибо! Ваш выбор готов',
+        summary: selectedName(),
+        note: 'Это предварительный выбор. Запись не оформлена.',
+        action: 'К деталям',
+        trigger: summary.querySelector('[data-edit-booking]'),
+      });
+    } else {
+      heading.focus();
+    }
   });
   summary.querySelector('[data-edit-booking]').addEventListener('click', () => {
     summary.hidden = true;

@@ -1,0 +1,38 @@
+.receipt-screen {
+  --receipt-bg:#21211f; --receipt-ink:#faf5ef; --receipt-muted:#cdc7bd;
+  --receipt-green:#97e8b1; --receipt-line:#ffffff55;
+  position:fixed; inset:0; width:100%; height:100dvh;
+  max-width:none; max-height:none; margin:0; border:0; border-radius:0;
+  padding:max(4.5rem,env(safe-area-inset-top)) clamp(1.25rem,6vw,5rem) max(1.25rem,env(safe-area-inset-bottom));
+  background:var(--receipt-bg); color:var(--receipt-ink); overflow:auto;
+}
+.receipt-screen[open]{display:grid;place-items:center}
+body:has(.receipt-screen[open]){overflow:hidden}
+.receipt-screen .receipt-copy{width:min(100%,42rem);margin:auto;text-align:center}
+.receipt-screen h2{color:inherit;font-size:clamp(2.35rem,8vw,5.8rem);line-height:1.02;letter-spacing:-.058em;margin:0;overflow-wrap:break-word}
+.receipt-screen p{color:inherit;line-height:1.5;margin:.85rem auto 0}
+.receipt-screen #receipt-screen-note{color:var(--receipt-muted);max-width:42ch}
+.receipt-screen .receipt-detail{white-space:pre-line;font-weight:650}
+.receipt-screen .receipt-mark{display:block;margin:0 auto clamp(.9rem,3vh,1.7rem);width:clamp(70px,20vw,118px);height:auto;color:var(--receipt-green);stroke:currentColor;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+.receipt-mark circle{fill:color-mix(in srgb,currentColor 10%,transparent)}
+.receipt-screen button{min-height:46px;color:inherit;background:none;border:1px solid var(--receipt-line);border-radius:.4rem;font:inherit;font-weight:650;cursor:pointer}
+.receipt-screen button:hover{border-color:currentColor}
+.receipt-screen button:focus-visible{outline:2px solid var(--receipt-green);outline-offset:4px}
+.receipt-screen .receipt-dismiss{position:absolute;top:max(.75rem,env(safe-area-inset-top));right:max(.75rem,env(safe-area-inset-right));margin:0}
+.receipt-screen .receipt-dismiss button{width:46px;border-radius:50%;font-size:1.6rem;line-height:1}
+.receipt-screen .receipt-back{padding:.55rem 1rem;margin-top:1.4rem}
+.receipt-studio,.receipt-srez,.receipt-flowers{color-scheme:light;--receipt-green:#286b48;--receipt-line:#4b3c3766}
+.receipt-studio{--receipt-bg:#eae2d6;--receipt-ink:#362a25;--receipt-muted:#624e42}
+.receipt-srez{--receipt-bg:#efe2ce;--receipt-ink:#311b17;--receipt-muted:#654a3e}
+.receipt-srez .receipt-detail{border-block:1px solid var(--receipt-line);padding:.7rem;max-width:30rem}
+.receipt-flowers{--receipt-bg:#f2f0e5;--receipt-ink:#283728;--receipt-muted:#4e5f46}
+.receipt-flowers h2{font-family:Georgia,serif;font-weight:400}
+.receipt-flowers .receipt-mark circle{stroke-dasharray:3 6}
+.receipt-vanta{--receipt-bg:#161e21;--receipt-ink:#f5f8ee;--receipt-muted:#c0ccc4}
+.receipt-vanta .receipt-copy{text-align:start;border-inline-start:2px solid var(--receipt-green);padding-inline-start:clamp(1rem,4vw,3rem)}
+.receipt-vanta .receipt-mark,.receipt-vanta #receipt-screen-note{margin-inline:0}
+.receipt-vanta .receipt-mark circle{visibility:hidden}
+.receipt-blok .receipt-mark circle{fill:var(--receipt-green);stroke:none}
+.receipt-blok .receipt-mark path{stroke:var(--receipt-bg)}
+@media(max-height:490px) and (orientation:landscape){.receipt-screen{padding-top:3rem}.receipt-screen .receipt-mark{width:56px;margin-bottom:.65rem}.receipt-screen h2{font-size:clamp(2rem,6vw,3.2rem)}}
+@media(prefers-reduced-motion:no-preference){.receipt-screen[open] .receipt-copy{animation:receipt-enter .32s ease-out both}@keyframes receipt-enter{from{opacity:.45;transform:translateY(8px)}to{opacity:1;transform:none}}}
