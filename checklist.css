@@ -73,7 +73,7 @@
 }
 .review-grid blockquote {
   margin: 0 0 1rem;
-  font-size: clamp(1.125rem, 2.3vw, 1.55rem);
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
   line-height: 1.38;
 }
 .review-grid figcaption { color: var(--soft-ink); }
