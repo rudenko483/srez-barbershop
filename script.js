@@ -94,7 +94,7 @@ if (bookingForm) {
   if (requested) choices.value = requested;
   const picked = bookingForm.querySelector('#booking-selected');
   function selectedName() {
-    return bookingForm.querySelector('input:checked')?.labels[0].querySelector('strong').textContent;
+    return bookingForm.querySelector('input[name=service]:checked')?.labels[0].querySelector('strong').textContent;
   }
   function showSelection() {
     const service = selectedName();
@@ -104,7 +104,9 @@ if (bookingForm) {
   showSelection();
   bookingForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    summary.querySelector('.summary-service').textContent = selectedName();
+    const price = bookingForm.querySelector('input[name=service]:checked').labels[0].querySelector('.visit-price').textContent;
+    const visit = [selectedName(), bookingForm.elements.namedItem('time').value, price].join(' · ');
+    summary.querySelector('.summary-service').textContent = visit;
     const notes = bookingForm.elements.namedItem('notes').value.trim();
     notesText.textContent = notes;
     notesText.hidden = !notes;
@@ -113,8 +115,8 @@ if (bookingForm) {
     if (window.showPortfolioReceipt) {
       window.showPortfolioReceipt({
         heading: 'Спасибо! Ваш выбор готов',
-        summary: selectedName(),
-        note: 'Это предварительный выбор. Запись не оформлена.',
+        summary: visit,
+        note: 'Время не забронировано.',
         action: 'К деталям',
         trigger: summary.querySelector('[data-edit-booking]'),
       });
@@ -125,7 +127,7 @@ if (bookingForm) {
   summary.querySelector('[data-edit-booking]').addEventListener('click', () => {
     summary.hidden = true;
     bookingForm.hidden = false;
-    bookingForm.querySelector('input:checked').focus();
+    bookingForm.querySelector('input[name=service]:checked').focus();
   });
   bookingForm.hidden = false;
 }

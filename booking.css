@@ -1,0 +1,14 @@
+[data-page="booking"] #main { max-width: 44rem; }
+[data-page="booking"] .page-lead { display: block; padding-block: clamp(1.5rem, 5vw, 3rem); }
+[data-page="booking"] .page-lead h1 { font-size: clamp(2.5rem, 8vw, 5rem); }
+[data-page="booking"] .page-lead p { margin-top: .75rem; }
+.booking-grid { display: block; }
+.booking-workspace { padding: 0; background: transparent; }
+.booking-workspace fieldset { border: 0; padding: 0; margin: 0 0 1.4rem; min-inline-size: 0; gap: .55rem; }
+.booking-workspace fieldset label { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; min-height: 70px; gap: .65rem; padding: .65rem .85rem; border-color: var(--rule); border-radius: .55rem; }
+.booking-workspace fieldset label:has(:checked) { background: #fcf2e4; border-color: var(--wine); }
+.booking-workspace input { accent-color: var(--wine); margin: 0; }
+.visit-price { color: var(--wine); white-space: nowrap; }
+.booking-workspace .visit-time { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.booking-workspace .visit-time label { grid-template-columns: auto auto; justify-content: center; min-height: 48px; padding: .35rem; }
+.booking-actions > .pill { width: 100%; justify-content: center; }
