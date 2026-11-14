@@ -1,7 +1,8 @@
 .breadcrumb {
   padding-block: .5rem;
   color: var(--soft-ink);
-  font-size: .9375rem;
+  font-size: 1.0625rem;
+  line-height: 1.35;
 }
 .breadcrumb ol {
   display: flex;
@@ -23,8 +24,11 @@
   opacity: .62;
 }
 .breadcrumb a {
-  color: inherit;
-  padding-block: .65rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--wine);
+  font-weight: 700;
   text-underline-offset: .2em;
 }
 .breadcrumb [aria-current] { font-weight: 650; }
@@ -34,7 +38,7 @@
   min-height: 44px;
   color: inherit;
   text-underline-offset: .2em;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 .mobile-action { display: none; }
 .link-icon { display: inline-block; flex: 0 0 auto; width: 1em; height: 1em; vertical-align: -.12em; }

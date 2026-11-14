@@ -26,8 +26,8 @@ body { background: var(--cream); }
   align-items: center;
   min-height: 44px;
   color: inherit;
-  font-size: clamp(.8125rem, 1.04vw, 1.05rem);
-  font-weight: 550;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  font-weight: 650;
   text-decoration: none;
   text-underline-offset: .35em;
 }
@@ -57,12 +57,13 @@ main h2 {
   min-height: 44px;
   align-items: center;
   gap: .65em;
-  font-size: clamp(.9rem, 1.2vw, 1.05rem);
-  font-weight: 650;
+  font-size: clamp(1.125rem, 1.55vw, 1.3125rem);
+  line-height: 1.35;
+  font-weight: 700;
   color: var(--wine);
   text-decoration: underline;
   text-underline-offset: .33em;
-  text-decoration-color: #5d211d66;
+  text-decoration-color: #5d211db3;
   transition: text-decoration-color 180ms ease;
 }
 .text-link:hover { text-decoration-color: currentColor; }
@@ -203,7 +204,8 @@ main h2 {
   align-items: center;
   min-height: 44px;
   color: inherit;
-  font-size: .92rem;
+  font-size: 1.0625rem;
+  font-weight: 650;
   text-decoration: none;
   text-underline-offset: .35em;
 }
@@ -213,8 +215,11 @@ main h2 {
   display: flex;
   justify-content: space-between;
   gap: .5rem;
-  min-height: 44px;
+  min-height: 48px;
   align-items: center;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 650;
   border-bottom: 1px solid var(--rule);
   padding: .7rem .15rem;
   text-decoration: none;
