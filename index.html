@@ -4,13 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#d6c3ad">
-  <meta name="description" content="СРЕЗ — современный барбершоп. Стрижки и бритьё.">
+  <meta name="description" content="СРЕЗ — демосайт барбершопа. Выберите стрижку, бритьё или оформление бороды и посмотрите примеры.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"СРЕЗ","url":"https://rudenko483.github.io/srez-barbershop/","inLanguage":"ru","description":"Демонстрационный сайт барбершопа: стрижки, бритьё и оформление бороды."}</script>
   <title>СРЕЗ — стрижки и бритьё</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="СРЕЗ">
+  <meta property="og:title" content="СРЕЗ — стрижки и бритьё">
+  <meta property="og:description" content="СРЕЗ — демосайт барбершопа. Выберите стрижку, бритьё или оформление бороды и посмотрите примеры.">
+  <meta property="og:url" content="https://rudenko483.github.io/srez-barbershop/">
+  <meta property="og:image" content="https://rudenko483.github.io/srez-barbershop/share-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Концепция интерьера барбершопа «СРЕЗ»">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css?v=52cdd5524f8b">
   <link rel="stylesheet" href="pages.css?v=a9fd253dd664">
   <link rel="stylesheet" href="expanded.css?v=6c8934401356">
+  <link rel="stylesheet" href="checklist.css">
+  <script src="checklist.js" defer></script>
   <script src="script.js?v=b8b6ca2ec48f" defer></script>
 </head>
 <body class="home" data-page="index">
@@ -19,7 +33,10 @@
   <main id="main" tabindex="-1">
   <section class="hero" aria-labelledby="hero-title">
     <div class="scene" aria-hidden="true">
-      <img src="interior.webp" alt="" width="1672" height="941" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 640px)" srcset="interior-small.webp">
+        <img src="interior.webp" alt="" width="1672" height="941" fetchpriority="high">
+      </picture>
     </div>
     <header class="header">
     <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
@@ -90,6 +107,26 @@
       </div>
     </div>
   </section>
+
+  <section class="section wrap checklist-section reviews" aria-labelledby="reviews-title">
+    <div class="section-heading"><h2 id="reviews-title">Отзывы</h2></div>
+    <p class="checklist-note">Вымышленные примеры для портфолио.</p>
+    <div class="review-grid">
+      <figure><blockquote>«Обсудили, сколько длины оставить сверху. Дома укладывается так же легко, как после стрижки».</blockquote><figcaption>Пример отзыва о стрижке</figcaption></figure>
+      <figure><blockquote>«За один визит привели в порядок и волосы, и бороду. Контур получился аккуратным».</blockquote><figcaption>Пример отзыва о комплексе</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="faq" class="section wrap checklist-section" aria-labelledby="faq-title">
+    <h2 id="faq-title">Частые вопросы</h2>
+    <div class="faq-list">
+      <details><summary>Как выбрать услугу?</summary><p>На странице <a href="services.html">«Услуги»</a> можно сравнить стрижку, бритьё и оформление бороды. Если нужны и стрижка, и борода, выберите <a href="combo.html">комплекс</a>.</p></details>
+      <details><summary>Где посмотреть цены и свободное время?</summary><p>Это демонстрационный сайт. Актуальные цены и свободное время появятся, когда барбершоп подключит свою систему записи.</p></details>
+      <details><summary>Можно ли показать фото желаемой стрижки?</summary><p>Да. Подберите один или два ракурса, чтобы показать длину и форму. Идеи есть в <a href="gallery.html">галерее</a>.</p></details>
+      <details><summary>Что входит в оформление бороды?</summary><p>Мастер подравнивает длину и оформляет контур. Если нужно полностью убрать щетину, в <a href="beard.html">описании услуги</a> есть отдельный вариант чистого бритья.</p></details>
+      <details><summary>Когда ждать ответа после заявки?</summary><p>В примере для портфолио заложен ответ в течение двух часов в рабочее время. Демо не отправляет заявки.</p></details>
+    </div>
+  </section>
 </main>
 
   <footer class="site-footer">
@@ -97,6 +134,7 @@
     <div>
       <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
       <p>Стрижки и бритьё</p>
+      <a class="footer-privacy" href="privacy.html">Конфиденциальность</a>
     </div>
     <nav aria-label="Навигация в подвале">
       <a href="services.html">Услуги</a>
@@ -104,10 +142,13 @@
       <a href="team.html">Мастера</a>
       <a href="gallery.html">Галерея</a>
       <a href="contacts.html">Контакты</a>
+      <a href="index.html#faq">Частые вопросы</a>
     </nav>
     <a class="pill pill-outline" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
   </div>
 </footer>
+
+  <a class="pill pill-primary mobile-action" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
 
   <dialog id="panel" aria-labelledby="panel-title">
   <div class="panel-shell">

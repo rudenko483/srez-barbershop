@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rudenko483.github.io/srez-barbershop/sitemap.xml

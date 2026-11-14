@@ -1,0 +1,161 @@
+.breadcrumb {
+  padding-block: .5rem;
+  color: var(--soft-ink);
+  font-size: .9375rem;
+}
+.breadcrumb ol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 .7rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  min-height: 2.75rem;
+}
+.breadcrumb li + li::before {
+  content: "/" / "";
+  opacity: .62;
+}
+.breadcrumb a {
+  color: inherit;
+  padding-block: .65rem;
+  text-underline-offset: .2em;
+}
+.breadcrumb [aria-current] { font-weight: 650; }
+.footer-privacy {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-underline-offset: .2em;
+  font-size: .9rem;
+}
+.mobile-action { display: none; }
+.scene picture { display: contents; }
+.booking-workspace #booking-summary > .text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-inline-end: 1rem;
+}
+.checklist-section { padding-block: clamp(2.75rem, 6vw, 6rem); }
+.checklist-note { color: var(--soft-ink); line-height: 1.5; }
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.review-grid figure {
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 1rem;
+}
+.review-grid blockquote {
+  margin: 0 0 1rem;
+  font-size: clamp(1.125rem, 2.3vw, 1.55rem);
+  line-height: 1.38;
+}
+.review-grid figcaption { color: var(--soft-ink); }
+.faq-list {
+  max-width: 58rem;
+  margin-block-start: clamp(1rem, 3vw, 2.5rem);
+}
+.faq-list details { border-block-start: 1px solid var(--rule); }
+.faq-list details:last-child { border-block-end: 1px solid var(--rule); }
+.faq-list summary {
+  cursor: pointer;
+  padding-block: 1rem;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-weight: 650;
+  text-underline-offset: .2em;
+}
+.faq-list summary:hover { text-decoration: underline; }
+.faq-list summary:focus-visible {
+  outline: 2px solid var(--wine);
+  outline-offset: 4px;
+}
+.faq-list p {
+  max-width: 65ch;
+  padding-bottom: 1.2rem;
+  color: var(--soft-ink);
+  line-height: 1.55;
+}
+.faq-list a, .privacy-copy a { color: var(--wine); text-underline-offset: .2em; }
+.team-demo { padding-block-start: 0; }
+.team-demo figure { max-width: 56rem; margin: 1.4rem 0 0; }
+.team-demo .photo img { height: auto; aspect-ratio: 3 / 2; }
+.contact-map, .privacy-copy { padding-block: 1rem clamp(3rem, 7vw, 7rem); }
+.contact-map p, .privacy-copy p {
+  max-width: 65ch;
+  margin-block: .75rem 1rem;
+  line-height: 1.55;
+}
+.contact-map .pill { margin-block: .4rem; }
+.contact-map .text-link { margin-inline-end: 1rem; }
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(18rem, 45vw, 29rem);
+  margin-top: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: .75rem;
+}
+.privacy-copy section + section { margin-top: 2.5rem; }
+.privacy-copy h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+[data-page="privacy"] h1 { overflow-wrap: anywhere; font-size: clamp(1.75rem, 7vw, 5.2rem); }
+.analytics-choice {
+  position: fixed;
+  z-index: 8;
+  inset: auto 1rem 1rem auto;
+  width: min(23rem, calc(100% - 2rem));
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 1rem;
+  background: var(--cream);
+  box-shadow: 0 .6rem 2rem #21160f30;
+}
+.analytics-choice p { margin-bottom: .7rem; line-height: 1.45; }
+.analytics-choice a { color: var(--wine); }
+.analytics-choice button { margin: .2rem .35rem .2rem 0; }
+.not-found {
+  min-height: 100svh;
+  display: grid;
+  align-content: center;
+  gap: 2.5rem;
+  padding-block: 2rem;
+}
+.not-found .wordmark { justify-self: start; min-height: 44px; align-content: center; }
+.not-found-code { color: var(--wine); font-weight: 760; }
+.not-found h1 {
+  max-width: 13ch;
+  margin-block: .35rem .75rem;
+  font-size: clamp(2.5rem, 9vw, 6rem);
+  line-height: 1.03;
+  letter-spacing: -.065em;
+}
+.not-found-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+@media (max-width: 640px) {
+  .page-header .header-actions > .pill { display: none; }
+  .review-grid { grid-template-columns: minmax(0, 1fr); }
+  body:has(.mobile-action) { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
+  html:has(.mobile-action) { scroll-padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
+  .mobile-action {
+    position: fixed;
+    display: inline-flex;
+    justify-content: center;
+    z-index: 5;
+    inset: auto .85rem calc(.65rem + env(safe-area-inset-bottom));
+    min-height: 50px;
+    box-shadow: 0 .4rem 1.1rem #21160f38;
+  }
+  .analytics-choice { bottom: calc(4.8rem + env(safe-area-inset-bottom)); }
+}

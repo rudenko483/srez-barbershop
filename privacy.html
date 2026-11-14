@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee2d1">
+  <meta name="description" content="Как демонстрационный сайт «СРЕЗ» обращается с данными, картой и аналитикой.">
+  <title>Конфиденциальность — СРЕЗ</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="СРЕЗ">
+  <meta property="og:title" content="Конфиденциальность — СРЕЗ">
+  <meta property="og:description" content="Как демонстрационный сайт «СРЕЗ» обращается с данными, картой и аналитикой.">
+  <meta property="og:url" content="https://rudenko483.github.io/srez-barbershop/privacy.html">
+  <meta property="og:image" content="https://rudenko483.github.io/srez-barbershop/share-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Концепция интерьера барбершопа «СРЕЗ»">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=52cdd5524f8b">
+  <link rel="stylesheet" href="pages.css?v=a9fd253dd664">
+  <link rel="stylesheet" href="expanded.css?v=6c8934401356">
+  <link rel="stylesheet" href="checklist.css">
+  <script src="checklist.js" defer></script>
+  <script src="script.js?v=b8b6ca2ec48f" defer></script>
+</head>
+<body class="inner" data-page="privacy">
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="header page-header">
+    <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
+    <nav class="header-nav" aria-label="Основная навигация">
+      <a href="services.html">Услуги</a>
+      <a href="about.html">О нас</a>
+      <a href="team.html">Мастера</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a class="pill pill-outline" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
+      <button type="button" class="menu-button" data-panel="menu" aria-label="Открыть меню"><span aria-hidden="true"></span></button>
+    </div>
+  </header>
+  <nav class="wrap breadcrumb" aria-label="Путь к странице">
+    <ol><li><a href="index.html">Главная</a></li><li aria-current="page">Конфиденциальность</li></ol>
+  </nav>
+  <main id="main" class="wrap" tabindex="-1">
+  <section class="page-lead" aria-labelledby="page-title">
+    <h1 id="page-title">Конфиденциальность</h1>
+    <p>«СРЕЗ» — демонстрационный сайт для портфолио.</p>
+  </section>
+  <div class="privacy-copy">
+    <section>
+      <h2>Демозапись</h2>
+      <p>Выбор услуги и пожелания остаются на открытой странице. Форма не отправляет и не сохраняет их. Пожалуйста, не вводите личные данные в поле пожеланий.</p>
+    </section>
+    <section>
+      <h2>Карта</h2>
+      <p>При открытии карты браузер подключается к OpenStreetMap. <a href="https://osmfoundation.org/wiki/Privacy_Policy">Правила конфиденциальности OpenStreetMap</a>.</p>
+    </section>
+    <section>
+      <h2>Аналитика</h2>
+      <p data-analytics-status>Google Analytics в этой версии не подключён.</p>
+      <button class="pill pill-outline" type="button" data-analytics-toggle hidden></button>
+    </section>
+  </div>
+</main>
+
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
+      <p>Стрижки и бритьё</p>
+      <a class="footer-privacy" href="privacy.html">Конфиденциальность</a>
+    </div>
+    <nav aria-label="Навигация в подвале">
+      <a href="services.html">Услуги</a>
+      <a href="about.html">О нас</a>
+      <a href="team.html">Мастера</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="index.html#faq">Частые вопросы</a>
+    </nav>
+    <a class="pill pill-outline" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</footer>
+
+  <dialog id="panel" aria-labelledby="panel-title">
+  <div class="panel-shell">
+    <form method="dialog" class="panel-dismiss">
+      <button type="submit" class="close-button" aria-label="Закрыть окно"><span aria-hidden="true"></span></button>
+    </form>
+    <h2 id="panel-title" tabindex="-1"></h2>
+    <div id="panel-content"></div>
+  </div>
+</dialog>
+
+<template id="menu">
+  <nav class="panel-nav" aria-label="Меню сайта">
+    <a href="index.html">Главная <span aria-hidden="true">↗</span></a>
+    <a href="services.html">Услуги <span aria-hidden="true">↗</span></a>
+      <a href="about.html">О нас <span aria-hidden="true">↗</span></a>
+      <a href="team.html">Мастера <span aria-hidden="true">↗</span></a>
+      <a href="gallery.html">Галерея <span aria-hidden="true">↗</span></a>
+      <a href="contacts.html">Контакты <span aria-hidden="true">↗</span></a>
+    <a href="booking.html">Выбрать услугу <span aria-hidden="true">↗</span></a>
+  </nav>
+</template>
+<template id="interior">
+  <img class="interior-image" src="interior.webp" width="1672" height="941" alt="Солнечный свет падает на штукатурку рядом с чёрным барберским креслом, полками и арочным зеркалом.">
+  <p class="photo-caption">Визуализация интерьера «СРЕЗ».</p>
+</template>
+
+</body>
+</html>

@@ -6,11 +6,24 @@
   <meta name="theme-color" content="#eee2d1">
   <meta name="description" content="Знакомство с концепцией и интерьером барбершопа «СРЕЗ».">
   <title>О нас — СРЕЗ</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="СРЕЗ">
+  <meta property="og:title" content="О нас — СРЕЗ">
+  <meta property="og:description" content="Знакомство с концепцией и интерьером барбершопа «СРЕЗ».">
+  <meta property="og:url" content="https://rudenko483.github.io/srez-barbershop/about.html">
+  <meta property="og:image" content="https://rudenko483.github.io/srez-barbershop/share-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Концепция интерьера барбершопа «СРЕЗ»">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css?v=52cdd5524f8b">
   <link rel="stylesheet" href="pages.css?v=a9fd253dd664">
   <link rel="stylesheet" href="expanded.css?v=6c8934401356">
+  <link rel="stylesheet" href="checklist.css">
+  <script src="checklist.js" defer></script>
   <script src="script.js?v=b8b6ca2ec48f" defer></script>
 </head>
 <body class="inner" data-page="about">
@@ -29,6 +42,9 @@
       <button type="button" class="menu-button" data-panel="menu" aria-label="Открыть меню"><span aria-hidden="true"></span></button>
     </div>
   </header>
+  <nav class="wrap breadcrumb" aria-label="Путь к странице">
+    <ol><li><a href="index.html">Главная</a></li><li aria-current="page">О нас</li></ol>
+  </nav>
   <main id="main" class="wrap" tabindex="-1">
   <section class="page-lead" aria-labelledby="page-title">
     <h1 id="page-title">О нас</h1>
@@ -64,6 +80,7 @@
     <div>
       <a class="wordmark" href="index.html" aria-label="СРЕЗ, главная">СРЕЗ</a>
       <p>Стрижки и бритьё</p>
+      <a class="footer-privacy" href="privacy.html">Конфиденциальность</a>
     </div>
     <nav aria-label="Навигация в подвале">
       <a href="services.html">Услуги</a>
@@ -71,10 +88,13 @@
       <a href="team.html">Мастера</a>
       <a href="gallery.html">Галерея</a>
       <a href="contacts.html">Контакты</a>
+      <a href="index.html#faq">Частые вопросы</a>
     </nav>
     <a class="pill pill-outline" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
   </div>
 </footer>
+
+  <a class="pill pill-primary mobile-action" href="booking.html">Выбрать услугу <span class="arrow" aria-hidden="true">↗</span></a>
 
   <dialog id="panel" aria-labelledby="panel-title">
   <div class="panel-shell">
