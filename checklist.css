@@ -37,6 +37,9 @@
   font-size: .9rem;
 }
 .mobile-action { display: none; }
+.link-icon { display: inline-block; flex: 0 0 auto; width: 1em; height: 1em; vertical-align: -.12em; }
+.success-check { color: #238451; flex: 0 0 auto; display: block; }
+#booking-summary .success-check { margin-bottom: 1rem; }
 .scene picture { display: contents; }
 .booking-workspace #booking-summary > .text-link {
   display: inline-flex;
